@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: postgres
+    password: 26499462
+    url: jdbc:postgresql://localhost:5432/Diary
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    hibernate:
+      ddl-auto: update
+      jdbc:
+        batch_size: 100
+    show-sql: true
