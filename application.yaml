@@ -13,5 +13,7 @@ spring:
     hibernate:
       ddl-auto: update
       jdbc:
-        batch_size: 100
+        batch_size: 1000
     show-sql: true
+
+upload.path: src/main/resources/students.csv

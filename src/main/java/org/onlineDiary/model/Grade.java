@@ -1,13 +1,24 @@
 package org.onlineDiary.model;
 
 
+import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-@NoArgsConstructor
-public class Progress {
-    private Integer[] grades;
+@Table(name = "grade")
+public class Grade {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
+    @Column(name = "grade", columnDefinition = "INT", nullable = false)
+    private int grade;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @JoinColumn(name = "student_id")
+    private Student student;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    @JoinColumn(name = "subject_id")
+    private Subject subject;
 }

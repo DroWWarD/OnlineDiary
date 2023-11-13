@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface StudClassRepository extends CrudRepository<Squad, Long> {
-
-    public Optional<Squad> findByName(String name);
+public interface SquadRepository extends CrudRepository<Squad, Long> {
+    Optional<Squad> findByName(String name);
 }

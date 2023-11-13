@@ -10,14 +10,14 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "stud_class")
-public class StudClass {
+@Table(name = "squad")
+public class Squad {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     @Column(name = "name", columnDefinition = "text", nullable = false)
     private String name;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "stud_class")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "squad")
     private List<Student> students = new ArrayList<>();
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn(name = "plan_id")

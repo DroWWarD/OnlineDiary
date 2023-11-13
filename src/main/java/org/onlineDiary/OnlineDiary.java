@@ -1,9 +1,11 @@
 package org.onlineDiary;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class Main {
+@SpringBootApplication
+public class OnlineDiary {
     public static void main(String[] args) {
-        SpringApplication.run()
+        SpringApplication.run(OnlineDiary.class, args);
     }
 }
