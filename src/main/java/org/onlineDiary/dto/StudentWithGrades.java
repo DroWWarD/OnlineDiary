@@ -10,7 +10,7 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class StudentWithGradesResponse extends StudentDTO{
+public class StudentWithGrades extends StudentDTO{
     private int id;
     private String family;
     private String name;
@@ -18,8 +18,8 @@ public class StudentWithGradesResponse extends StudentDTO{
     private String group;
     private Map<String, Integer> grades = new HashMap<>();
 
-    public static StudentWithGradesResponse copyOf(StudentWithGradesResponse original) {
-        StudentWithGradesResponse copy = new StudentWithGradesResponse();
+    public static StudentWithGrades copyOf(StudentWithGrades original) {
+        StudentWithGrades copy = new StudentWithGrades();
         copy.id = original.id;
         copy.family = original.family;
         copy.name = original.name;

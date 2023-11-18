@@ -18,7 +18,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
         SELECT new org.onlineDiary.dto.StudentWithAverageGrade(s.id, s.family, s.name, s.age, :squadName, ROUND (AVG(g.grade), 2))
         FROM Student s
         JOIN Squad sq ON sq.id=s.squad.id
-        JOIN Grade g ON g.student.id=s.id
+        LEFT JOIN Grade g ON g.student.id=s.id
         WHERE sq.name LIKE :squadName
         GROUP BY s.id
     """)

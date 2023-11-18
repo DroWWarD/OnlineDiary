@@ -2,13 +2,12 @@ package org.onlineDiary.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
-public class StudentResponse {
+public class StudentDTO {
     private int id;
+    private String group;
     private String family;
     private String name;
     private int age;

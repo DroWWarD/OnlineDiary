@@ -7,11 +7,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class StudentWithAverageGrade extends StudentResponse {
+public class StudentWithAverageGrade extends StudentDTO {
     private int id;
     private String family;
     private String name;
     private int age;
     private String group;
-    private double average;
+    private Double average;
 }
